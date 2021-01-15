@@ -1,0 +1,141 @@
+input,div,button {
+  margin: 0!important;
+  padding: 0!important;
+}
+button{
+  display:flex;
+  justify-content: center;
+}
+.banner image{
+  width: 686rpx;
+  height: 229rpx;
+  display: block;
+  margin: 0 auto;
+  border-radius: 3%;
+}
+.container .nav .nav_lists image{
+  width: 98rpx;
+  height: 98rpx;
+}
+.container .nav .nav_lists{
+  margin-top: 60rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .nav .nav_lists text{
+  margin-top: 15rpx;
+  font-size: 23rpx;
+  color: #464C5B;
+}
+.container .nav .nav_lists view{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main_content .title{
+  padding: 0 31rpx;
+  margin-top: 79rpx;
+  margin-bottom: 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main_content .title text{
+font-size: 36rpx;
+font-family: PingFang SC;
+font-weight: bold;
+color: #17233D;
+}
+.container .main_content .title image{
+  width: 16rpx;
+  height: 16rpx;
+}
+.container .main_content .my_test .not_logined{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 686rpx;
+  height: 340rpx;
+  padding: 79rpx 0;
+  border: #00AFDB 1px solid;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 20rpx;
+}
+.container .main_content .my_test .not_logined text:nth-child(1){
+font-size: 32rpx;
+font-weight: 500;
+color: #00AFDB;
+}
+
+.container .main_content .my_test .not_logined text:nth-child(2){
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #9EA7B4;
+}
+.container .main_content .my_test .not_logined button{
+  width: 220rpx;
+  height: 64rpx;
+  border-radius: 32rpx;
+  background-color: #00AFDB;
+  color: white;
+  font-size: 36rpx;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.container .main_content .funny_test .item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 55rpx;
+}
+.container .main_content .funny_test .item .box_right{
+  border-radius: 20rpx;
+  position: relative;
+}
+.container .main_content .funny_test .item .box_right image{
+  width: 239rpx;
+  height: 160rpx;
+  border-radius: 20rpx;
+}
+.container .main_content .funny_test .item .box_right text{
+  width: 140rpx;
+  height: 30rpx;
+  background: #000;
+  opacity: 0.8;
+  position: absolute;
+  font-size: 20rpx;
+  color: #fff;
+  border-radius: 0 16rpx;
+  left: 0;
+  font-weight: 500;
+  bottom: 0;
+  text-align: center;
+}
+.container .main_content .funny_test .item .box_left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 160rpx;
+}
+.container .main_content .funny_test .item .box_left button{
+  width: 110rpx;
+  height: 40rpx;
+  color: #00AFDB;
+  box-sizing: border-box;
+  border: 1rpx solid #00AFDB;
+  font-size: 20rpx;
+  display: flex;
+  flex-direction: row!important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rpx;
+}
+.container .main_content .funny_test .item .box_left .subtitle{
+  font-size: 32rpx;
+}

@@ -1,0 +1,19 @@
+<view class="container">
+  <!-- 分类列表区域开始 -->
+  <view  class="cateItem">
+    <view class="header">111</view>
+    <!-- 图书列表区域开始 -->
+    <view>
+        <view class="bookItem">
+            <image src=""></image>
+            <view class="bookInfo">
+                <view class="bookTitle">鬼不语之仙墩鬼泣（精装）</view>
+                <view class="minorCate">惊悚恐怖</view>
+                <view class="author">天下霸唱</view>
+            </view>
+        </view>
+    </view>
+    <!-- 图书列表区域结束 -->
+  </view>
+  <!-- 分类列表区域结束 -->
+</view>
