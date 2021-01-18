@@ -1,6 +1,36 @@
-input,div,button {
-  margin: 0!important;
-  padding: 0!important;
+input,button,view,text,image{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: PingFang SC;
+  text-align: center;
+}
+.container{
+  padding: 0 32rpx;
+}
+.container button:not([size='mini']){
+  margin: 0;
+  padding: 0;
+}
+.subtitle{
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #17233d;
+  text-align: left;
+}
+.count{
+  background: #000;
+  opacity: 0.8;
+  position: absolute;
+  height: 30rpx;
+  border-radius: 0 16rpx;
+  font-weight: 500;
+  left: 0;
+  bottom: 0;
+  color: white;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 30rpx;
 }
 button{
   display:flex;
@@ -20,7 +50,7 @@ button{
 .container .nav .nav_lists{
   margin-top: 60rpx;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .container .nav .nav_lists text{
@@ -35,7 +65,6 @@ button{
   align-items: center;
 }
 .container .main_content .title{
-  padding: 0 31rpx;
   margin-top: 79rpx;
   margin-bottom: 24rpx;
   display: flex;
@@ -44,7 +73,6 @@ button{
 }
 .container .main_content .title text{
 font-size: 36rpx;
-font-family: PingFang SC;
 font-weight: bold;
 color: #17233D;
 }
@@ -94,27 +122,18 @@ color: #00AFDB;
   margin-bottom: 55rpx;
 }
 .container .main_content .funny_test .item .box_right{
+  width: 239rpx;
+  height: 160rpx;
+  overflow: hidden;
   border-radius: 20rpx;
   position: relative;
 }
 .container .main_content .funny_test .item .box_right image{
-  width: 239rpx;
-  height: 160rpx;
-  border-radius: 20rpx;
+  width: 100%;
+  height: 100%;
 }
 .container .main_content .funny_test .item .box_right text{
   width: 140rpx;
-  height: 30rpx;
-  background: #000;
-  opacity: 0.8;
-  position: absolute;
-  font-size: 20rpx;
-  color: #fff;
-  border-radius: 0 16rpx;
-  left: 0;
-  font-weight: 500;
-  bottom: 0;
-  text-align: center;
 }
 .container .main_content .funny_test .item .box_left{
   display: flex;
@@ -122,6 +141,8 @@ color: #00AFDB;
   justify-content: space-between;
   align-items: flex-start;
   height: 160rpx;
+  min-width: 0;
+  flex: 1;
 }
 .container .main_content .funny_test .item .box_left button{
   width: 110rpx;
@@ -137,5 +158,129 @@ color: #00AFDB;
   border-radius: 20rpx;
 }
 .container .main_content .funny_test .item .box_left .subtitle{
-  font-size: 32rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #17233d;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+.container .main_content .funny_test .item .box_left .desc{
+  font-size: 28rpx;
+  font-weight: 500;  
+  color: #657180;
+}
+.container .main_content .relax .item_box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main_content .relax .item_box .item{
+  width: 218rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* flex: 1; */
+}
+.container .main_content .relax .item_box .item .image_box{
+  width: 218rpx;
+  height: 218rpx;
+  position: relative;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.container .main_content .relax .item_box .item .image_box .count{
+  width: 110rpx;
+}
+.container .main_content .relax .item_box .item .image_box image{
+  width: 100%;
+  height: 100%;
+}
+.container .main_content .relax .item_box .item .subtitle{
+  font-weight: 500;  
+  color: #464C5B;
+  font-size: 28rpx;
+  padding: 0 7rpx;
+  margin-top: 15rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.container .main_content .article .item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .main_content .article .item .subtitle_box{
+  display: flex;
+  justify-content: space-between;
+}
+.container .main_content .article .item .subtitle_box .time{
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #9ea7b4;
+}
+.container .main_content .article .item .desc_box{
+  display: flex;
+  justify-content: space-between;
+}
+.container .main_content .article .item .desc_box .box_left .desc{
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #657180;
+}
+.container .main_content .article .item .desc_box .box_left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .main_content .article .item .desc_box .box_right{
+  width: 239rpx;
+  height: 160rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.container .main_content .article .item .desc_box .box_right image{
+  width: 100%;
+  height: 100%;
+}
+.container .main_content .article .item .desc_box .box_left .info_box{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .main_content .article .item .desc_box .box_left .info_box .is_top{
+  width: 55rpx;
+  height: 32rpx;
+  background: #C4F3F3;
+  border-radius: 16rpx;
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #2dc8c6;
+  text-align: center;
+  line-height: 32rpx;
+}
+.container .main_content .article .item .desc_box .box_left .info_box .label{
+  width: 94rpx;
+  height: 32rpx;
+  background: #F2F4F5;
+  border-radius: 16rpx;
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #9ea7b4;
+  line-height: 32rpx;
+}
+.container .main_content .article .item .desc_box .box_left .info_box .view_number_box{
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #17233D;
+  height: 32rpx;
+  line-height: 32rpx;
+}
+.container .main_content .article .item .desc_box .box_left .info_box .view_number_box image{
+  width: 24rpx;
+  height: 19rpx;
+  vertical-align: middle;
+  margin-right: 1rpx;
 }

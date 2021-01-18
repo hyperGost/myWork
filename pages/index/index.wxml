@@ -31,7 +31,7 @@
     </view>
   </view>
   <view class="main_content">
-    <view class="my_test">
+    <view class="main_content_item my_test">
       <navigator url="" class="title">
         <text>我的测评</text>
         <image src="/images/next.png"></image>
@@ -42,44 +42,91 @@
         <button>去登录</button>
       </view>
     </view>
-    <view class="test_item funny_test">
+    <view class="main_content_item funny_test">
       <navigator url="" class="title">
         <text>趣味测评</text>
         <image src="/images/next.png"></image>
       </navigator>
       <navigator class="item" url="">
         <view class="box_left">
-          <text class="subtitle">测一测你与哪类人注定合不</text>
+          <view class="subtitle">测一测你与哪类人的有有有有有有有湖广会馆哈哈哈哈</view>
+          <text class="desc">想知道朋友中谁与你的性格</text>
           <button>马上测评</button>
         </view>
         <view class="box_right">
           <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
-          <text>1人测试</text>
+          <text class="count">1人测试</text>
         </view>
       </navigator>
       <navigator class="item" url="">
         <view class="box_left">
           <text class="subtitle">爱情态度测试</text>
+          <text class="desc">对待爱情，你的态度是哪种？</text>
           <button>马上测评</button>
         </view>
         <view class="box_right">
           <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
-          <text>4人测试</text>
+          <text class="count">4人测试</text>
         </view>
       </navigator>
     </view>
-    <view class="test_item relax">
+    <view class="relax main_content_item">
       <navigator url="" class="title">
         <text>放松训练</text>
         <image src="/images/next.png"></image>
       </navigator>
-      <navigator class="item" url="">
-        <view>
-          <image></image>
-          <text>2.23人</text>
-        </view>
-        <text>DJ治疗法</text>
+      <view class="item_box">
+        <navigator class="item" url="">
+          <view class="image_box">
+            <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
+            <text class="count">2.23人</text>
+          </view>
+          <text class="subtitle">纾解紧张焦虑</text>
+        </navigator>
+        <navigator class="item" url="">
+          <view class="image_box">
+            <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
+            <text class="count">2.23人</text>
+          </view>
+          <text class="subtitle">去感受自然的美的好得和恢复稳定稳定</text>
+        </navigator>
+        <navigator class="item" url="">
+          <view class="image_box">
+            <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
+            <text class="count">2.23人</text>
+          </view>
+          <text class="subtitle">教你卸下自的没哈哈哈哈哈哈哈哈哈哈哈</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="article main_content_item">
+      <navigator url="" class="title">
+        <text>科普文章</text>
+        <image src="/images/next.png"></image>
       </navigator>
+      <view class="item">
+        <view class="subtitle_box">
+          <text class="subtitle over_ellipsis_single">评价男女关系是否健康 （我的</text>
+          <text class="time">2020/12/28</text>
+        </view>
+        <view class="desc_box">
+          <view class="box_left">
+            <text class="desc over_ellipsis_multi">男女关系难免起起伏伏，有时顺利，有时困难</text>
+            <view class="info_box">
+              <text class="is_top">置顶</text>
+              <text class="label">人际关系</text>
+              <view class="view_number_box">
+                <image src="/images/views.png"></image>
+                <text class="view_number">33人</text>
+              </view>
+            </view>
+          </view>
+          <view class="box_right">
+            <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
+          </view>        
+        </view>
+      </view>
+      
     </view>
   </view>
 </view>
