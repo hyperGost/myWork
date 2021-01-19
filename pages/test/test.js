@@ -6,14 +6,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    statusBarHeight:app.globalData.statusBarHeight
+    statusBarHeight:app.globalData.statusBarHeight,
+    menuButtonHeight:app.globalData.menuButtonHeight,
+    menuButtonTop:app.globalData.menuButtonTop,
+    windowWidth:app.globalData.windowWidth,
+    topBarPaddingTop:300
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('状态栏高度'+this.data.statusBarHeight)
+    let _data=this.data;
+    _data.topBarPaddingTop=(_data.menuButtonHeight/2+_data.menuButtonTop)-72/750*_data.windowWidth/2;
+    this.setData({topBarPaddingTop:_data.topBarPaddingTop})
   },
 
   /**
