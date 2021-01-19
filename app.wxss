@@ -1,4 +1,26 @@
 /**app.wxss**/
-.container {
-  box-sizing: border-box;
-} 
+  /* input,button,view,text,image{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: PingFang SC;
+  } */
+.container button:not([size='mini']){
+    margin: 0;
+    padding: 0;
+  }
+  .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .column{
+    flex-direction: column;
+  }
+  .space_around{
+    justify-content: space-around;
+  }
+  .space_between{
+    justify-content: space-between;
+  }

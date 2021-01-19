@@ -1,18 +1,19 @@
 // pages/test/test.js
+const app=getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    statusBarHeight:app.globalData.statusBarHeight
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log('状态栏高度'+this.data.statusBarHeight)
   },
 
   /**

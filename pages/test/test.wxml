@@ -1,2 +1,18 @@
-<!--pages/test/test.wxml-->
-<text>pages/test/test.wxml</text>
+<!-- <view class="topbar" style="padding-top:{{statusBarHeight}}px">
+  <view class="serch_box flex">
+    <image src="/images/serch.png" class="serch_img"></image>
+    <input class="serch_input" placeholder="请输入你想找的内容" />
+  </view>
+</view> -->
+<!-- <view class="top-comend" style="padding-top:{{statusBarHeight}}px"></view> -->
+<!-- <view class="container">这是测试</view> -->
+<view class="topbar" style="padding-top:{{statusBarHeight}}px">
+  <view class="arrow-box row">
+    <image src="/images/serch.png"></image>
+  </view>
+  <view class="input-box row">
+    <input placeholder="请输入你想找的内容" />
+  </view>
+</view>
+<view class="top-comend" style="padding-top:{{statusBarHeight}}px"></view>
+<view>这是测试</view>

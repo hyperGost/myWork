@@ -1,22 +1,25 @@
-input,button,view,text,image{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: PingFang SC;
-  text-align: center;
-}
+
 .container{
   padding: 0 32rpx;
 }
-.container button:not([size='mini']){
-  margin: 0;
-  padding: 0;
-}
+
 .subtitle{
   font-size: 32rpx;
   font-weight: bold;
   color: #17233d;
   text-align: left;
+}
+.over_ellipsis_single{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.over_ellipsis_multi{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
 }
 .count{
   background: #000;
@@ -208,15 +211,24 @@ color: #00AFDB;
   text-overflow: ellipsis;
 }
 .container .main_content .article .item{
+  margin-bottom: 52rpx;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .container .main_content .article .item .subtitle_box{
+  min-width: 0;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 26rpx;
+}
+.container .main_content .article .item .subtitle_box .subtitle{
+  margin-right: 100rpx;
 }
 .container .main_content .article .item .subtitle_box .time{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 20rpx;
   font-weight: 500;
   color: #9ea7b4;
@@ -228,15 +240,19 @@ color: #00AFDB;
 .container .main_content .article .item .desc_box .box_left .desc{
   font-size: 28rpx;
   font-weight: 500;
+  text-align: left;
   color: #657180;
+  /* margin-right: 39rpx; */
+  padding-right: 39rpx;
 }
 .container .main_content .article .item .desc_box .box_left{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* flex: 2; */
 }
 .container .main_content .article .item .desc_box .box_right{
-  width: 239rpx;
+  flex: 0 0 239rpx;
   height: 160rpx;
   border-radius: 20rpx;
   overflow: hidden;
@@ -272,11 +288,18 @@ color: #00AFDB;
   line-height: 32rpx;
 }
 .container .main_content .article .item .desc_box .box_left .info_box .view_number_box{
-  font-size: 20rpx;
   font-weight: 500;
   color: #17233D;
   height: 32rpx;
   line-height: 32rpx;
+}
+.container .main_content .article .item .desc_box .box_left .info_box .view_number_box text{
+  font-size: 20rpx;
+  vertical-align: middle;
+  color: #9ea7b4;
+}
+.container .main_content .article .item .desc_box .box_left .info_box .view_number_box .view_number{
+  color: #17233D;
 }
 .container .main_content .article .item .desc_box .box_left .info_box .view_number_box image{
   width: 24rpx;
@@ -284,3 +307,4 @@ color: #00AFDB;
   vertical-align: middle;
   margin-right: 1rpx;
 }
+
