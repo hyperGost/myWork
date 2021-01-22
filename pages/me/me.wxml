@@ -1,2 +1,55 @@
-<!--pages/me/me.wxml-->
-<text>pages/me/me.wxml</text>
+<view class="topbar" style="margin-top:{{topBarMarginTop}}px">
+  <view class="nav_title h_100">个人中心</view>
+</view>
+<view class="block" style="height:{{topBarMarginTop+72/750*windowWidth}}px;margin-bottom:52rpx"></view>
+<view class="container">
+  <view class="user_info flex flex_between">
+    <view class="avatar">
+      <image class="w_100 h_100" src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
+    </view>
+    <view class="info_box h_100 flex_1 flex flex_column align_start flex_between">
+      <view class="name_box flex flex_between w_100">
+        <text class="name">王晓</text>
+        <navigator><text style="font-size:36rpx;font-weight:bold" class="iconfont icon-setting"></text></navigator>
+      </view>
+      <text class="tel">18011112348</text>
+    </view>
+  </view>
+  <view class="opration_item_box">
+    <navigator class="item flex flex_between">
+      <view class="title_box">
+        <text style="color:#E7A247" class="iconfont icon-record1"></text>
+        <text class="title">测试记录</text>
+      </view>
+      <text class="iconfont icon-next"></text>
+    </navigator>
+    <navigator class="item flex flex_between">
+      <view class="title_box">
+        <text style="color:#3797EE" class="iconfont icon-record2"></text>
+        <text class="title">提问记录</text>
+      </view>
+      <text class="iconfont icon-next"></text>
+    </navigator>
+    <navigator class="item flex flex_between">
+      <view class="title_box">
+        <text style="color:#3FD3B1" class="iconfont icon-record2"></text>
+        <text class="title">提问记录</text>
+      </view>
+      <text class="iconfont icon-next"></text>
+    </navigator>
+    <navigator class="item flex flex_between">
+      <view class="title_box">
+        <text style="color:#F75F73" class="iconfont icon-record2"></text>
+        <text class="title">提问记录</text>
+      </view>
+      <text class="iconfont icon-next"></text>
+    </navigator>
+    <navigator class="item flex flex_between">
+      <view class="title_box">
+        <text style="color:#6477EB" class="iconfont icon-record2"></text>
+        <text class="title">提问记录</text>
+      </view>
+      <text class="iconfont icon-next"></text>
+    </navigator>
+  </view>
+</view>

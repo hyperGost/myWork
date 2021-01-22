@@ -1,11 +1,13 @@
 // pages/me/me.js
+const app=getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    topBarMarginTop:app.globalData.topBarMarginTop,
+    windowWidth:app.globalData.windowWidth,
   },
 
   /**

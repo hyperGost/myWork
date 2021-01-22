@@ -9,18 +9,6 @@
   color: #17233d;
   text-align: left;
 }
-.over_ellipsis_single{
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.over_ellipsis_multi{
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-}
 .count{
   background: #000;
   opacity: 0.8;

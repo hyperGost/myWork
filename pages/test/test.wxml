@@ -1,18 +1,46 @@
-<view class="topbar" style="padding-top:{{topBarPaddingTop}}px">
+<view class="topbar flex flex_left" style="margin-top:{{topBarMarginTop}}px">
+  <navigator class="back_icon"><text class="iconfont icon-back" style="font-size:38rpx;font-weight:700"></text></navigator>
   <view class="serch_box flex">
     <image src="/images/serch.png" class="serch_img"></image>
-    <input class="serch_input" placeholder="请输入你想找的内容" />
+    <input class="serch_input" placeholder="搜索" placeholder-style="font-size:36rpx;"/>
   </view>
 </view>
-<view class="top-comend" style="height:{{topBarPaddingTop+72/750*windowWidth}}px"></view>
-<view class="container">这是测试</view>
-<!-- <view class="topbar" style="padding-top:{{statusBarHeight}}px">
-  <view class="arrow-box row">
-    <image src="/images/serch.png"></image>
+<view class="block" style="height:{{topBarMarginTop+72/750*windowWidth}}px"></view>
+<view class="container flex align_start">
+  <view class="left_nav_box">
+    <view wx:for="{{testCategory}}" wx:key='index' data-index='{{index}}' bindtap="switchLeftNav" class="left_nav_item {{navActiveIndex===index ? 'nav_active' : ''}}">
+      {{item}}
+    </view>
   </view>
-  <view class="input-box row">
-    <input placeholder="请输入你想找的内容" />
+  <view class="right_content_box">
+    <view class="top_bar_box flex flex_between">
+      <view class="order-by flex" bindtap="orderBy">
+        <view style="color:{{testOrderIndex==1 ? 'black' : '#9EA7B4'}}" data-index='1' class="top_bar_item">最新</view>
+        <view style="color:{{testOrderIndex==2 ? 'black' : '#9EA7B4'}}" class="top_bar_item" data-index='2'>最热</view>
+        <view style="color:{{testOrderIndex==3 ? 'black' : '#9EA7B4'}}"class="top_bar_item" data-index='3'>价格</view>
+      </view>
+      <view class="test_number_box">
+        <text>共</text>
+        <text class="test_number">29</text>
+        <text>个测评</text>
+      </view>
+    </view>
+    <view class="test_item_box flex flex_start" wx:for="{{testItem}}" wx:key='key'>
+      <view class="box_left">
+        <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
+        <text class="count">{{item.testNumber}}人</text>
+      </view>
+      <view class="box_right flex flex_column flex_between align_start flex-1">
+        <text class="title over_ellipsis_single">{{item.title}}</text>
+        <text class="desc over_ellipsis_single">{{item.desc}}</text>
+        <view class="box_bottom flex flex_between">
+          <view>
+            <text wx:if="{{item.price!=0}}" style="font-size:16rpx" class="price">￥</text>
+            <text class="price">{{item.price==0 ? '免费' : item.price}}</text>
+          </view>
+          <button class="flex">马上测试</button>
+        </view>
+      </view>
+    </view>
   </view>
 </view>
-<view class="top-comend" style="padding-top:{{statusBarHeight}}px"></view>
-<view>这是测试</view> -->

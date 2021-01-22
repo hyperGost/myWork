@@ -1,43 +1,45 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/test/test",
+    "pages/me/me",
     "pages/consult/consult",
-    "pages/me/me"
+    "pages/test/test",
+    "pages/index/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "渝悦心理",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "navigationStyle":"custom"
   },
   "tabBar": {
     "color": "#657180",
     "selectedColor": "#00AFDB",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "images/home.png",
-      "selectedIconPath": "images/homeActive.png"
-    },
-    {
-      "pagePath": "pages/test/test",
-      "text": "测评",
-      "iconPath": "images/test.png",
-      "selectedIconPath": "images/testActive.png"
-    },
-    {
-      "pagePath": "pages/consult/consult",
-      "text": "咨询",
-      "iconPath": "images/expert.png",
-      "selectedIconPath": "images/expertActive.png"
-    },
-    {
-      "pagePath": "pages/me/me",
-      "text": "我的",
-      "iconPath": "images/user.png",
-      "selectedIconPath": "images/userActive.png"
-    }
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/homeActive.png"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "测评",
+        "iconPath": "images/test.png",
+        "selectedIconPath": "images/testActive.png"
+      },
+      {
+        "pagePath": "pages/consult/consult",
+        "text": "咨询",
+        "iconPath": "images/expert.png",
+        "selectedIconPath": "images/expertActive.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/userActive.png"
+      }
   ]
   },
   "style": "v2",

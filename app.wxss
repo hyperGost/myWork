@@ -1,13 +1,34 @@
 /**app.wxss**/
-  /* input,button,view,text,image{
+@import "./style/iconfont.wxss";
+  input,button,view,text,image{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: PingFang SC;
-  } */
+    font-weight: 500;
+  }
+  text.over_ellipsis_single{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+  text.over_ellipsis_multi{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  }
+  .input-placeholder{
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #9EA7B4;
+  }
 .container button:not([size='mini']){
     margin: 0;
     padding: 0;
+    font-weight: 500;
   }
   .flex{
     display: flex;
@@ -15,12 +36,36 @@
     align-items: center;
     flex-direction: row;
   }
-  .column{
+  .flex_column{
     flex-direction: column;
   }
-  .space_around{
+  .flex_around{
     justify-content: space-around;
   }
-  .space_between{
+  .flex_between{
     justify-content: space-between;
+  }
+  .flex_around{
+    justify-content: space-around;
+  }
+  .flex_left{
+    justify-content: left;
+  }
+  .flex_right{
+    justify-content: right;
+  }
+  .flex_start{
+    justify-content: flex-start;
+  }
+  .align_start{
+    align-items: flex-start;
+  }
+  .flex_1{
+    flex: 1;
+  }
+  .w_100{
+    width: 100%;
+  }
+  .h_100{
+    height: 100%;
   }

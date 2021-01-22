@@ -1,11 +1,14 @@
 // pages/consult/consult.js
+const app=getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    topBarMarginTop:app.globalData.topBarMarginTop,
+    windowWidth:app.globalData.windowWidth,
+    doctor:[1,2,3]
   },
 
   /**

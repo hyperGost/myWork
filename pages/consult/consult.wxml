@@ -1,2 +1,38 @@
-<!--pages/consult/consult.wxml-->
-<text>pages/consult/consult.wxml</text>
+<view class="topbar" style="margin-top:{{topBarMarginTop}}px">
+  <navigator>
+    <text class="iconfont icon-back top_icon"></text>
+  </navigator>
+  <view class="nav_title">预约咨询</view>
+</view>
+<view class="block" style="height:{{topBarMarginTop+72/750*windowWidth}}px;margin-bottom:52rpx"></view>
+<view class="container">
+  <view wx:for="{{doctor}}" class="doctor_box flex flex_between">
+    <view class="box_left">
+      <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
+    </view>
+    <view class="box_right flex flex_column flex_between flex_1 align_start h_100">
+      <view class="name_box flex flex_between w_100">
+        <text class="name">吴艾婧</text>
+        <text style="color:#00AFDB;font-size:46rpx" class="iconfont icon-message"></text>
+      </view>
+      <view class="desc">
+        <text class="title">教授、主治医师、博士导师</text>
+        <view class="experience_box flex">
+          <view class="hour-box">
+            <text class="hour">6000+</text>
+            <text>小时咨询经验</text>
+          </view>
+          <view class="number_box">
+            <text class="number">3444+</text>
+            <text>帮助人数</text>
+          </view>
+        </view>
+      </view>
+      <view class="label_box flex">
+        <view class="label">个人成长</view>
+        <view class="label">婚姻家庭</view>
+        <view class="label">人际关系</view>
+      </view>
+    </view>
+  </view>
+</view>

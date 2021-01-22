@@ -136,7 +136,7 @@
         </view>
         <view class="desc_box">
           <view class="box_left">
-            <text class="desc over_ellipsis_multi">人类的记忆就像是一台摄影机，能把我们看到和听到的记录下来哈哈哈哈</text>
+            <text class="desc over_ellipsis_multi">人类的记忆就像是一台摄影机，能把我们看到和听到的记录下来哈哈哈</text>
             <view class="info_box">
               <text class="is_top">置顶</text>
               <text class="label">人际关系</text>

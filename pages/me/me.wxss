@@ -1,1 +1,55 @@
-/* pages/me/me.wxss */
+  .topbar{
+    width: 100%;
+    height: 72rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    text-align: center;
+}
+.topbar .nav_title{
+  line-height: 72rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #17233D;
+}
+.container{
+  margin: 0 32rpx;
+}
+.container .user_info{
+  height: 160rpx;
+  margin-bottom: 80rpx;
+}
+.container .user_info .avatar{
+  margin-right: 23rpx;
+  overflow: hidden;
+  width: 160rpx;
+  height:160rpx;
+  border-radius: 50%;
+}
+.container .info_box{
+  padding: 24rpx 0;
+}
+.container .user_info .info_box .name_box .name{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #17233D;
+}
+.container .user_info .info_box .tel{
+  font-size: 32rpx;
+  color: #657180;
+}
+.container .opration_item_box .item{
+  margin-bottom: 64rpx;
+}
+.container .opration_item_box .item .title_box .title{
+  font-size: 32rpx;
+  color: #464C5B;
+}
+.container .opration_item_box .item .iconfont{
+  font-size:32rpx;
+  color: #C3CBD6;
+}
+.container .opration_item_box .item .title_box .iconfont{
+  padding-right: 24rpx;
+}
