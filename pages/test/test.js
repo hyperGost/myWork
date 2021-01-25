@@ -6,8 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    //手机顶部导航栏高
     statusBarHeight:app.globalData.statusBarHeight,
+    //胶囊按钮高
     menuButtonHeight:app.globalData.menuButtonHeight,
+    //胶囊top值
     menuButtonTop:app.globalData.menuButtonTop,
     windowWidth:app.globalData.windowWidth,
     topBarMarginTop:app.globalData.topBarMarginTop,
@@ -31,6 +34,30 @@ Page({
         title:'FPA性格色彩测试',
         desc:'红蓝黄绿，你是那种？',
         testNumber:'188.6万',
+        price:9.9,
+      },
+      {
+        title:'孤独水平感测试',
+        desc:'测一测你当前的孤独状况我要吃饭我要吃饭吃好吃的烤面筋',
+        testNumber:'186.7万',
+        price:9.9,
+      },
+      {
+        title:'孤独水平感测试',
+        desc:'测一测你当前的孤独状况我要吃饭我要吃饭吃好吃的烤面筋',
+        testNumber:'186.7万',
+        price:9.9,
+      },
+      {
+        title:'孤独水平感测试',
+        desc:'测一测你当前的孤独状况我要吃饭我要吃饭吃好吃的烤面筋',
+        testNumber:'186.7万',
+        price:9.9,
+      },
+      {
+        title:'孤独水平感测试',
+        desc:'测一测你当前的孤独状况我要吃饭我要吃饭吃好吃的烤面筋',
+        testNumber:'186.7万',
         price:9.9,
       },
       {

@@ -1,7 +1,4 @@
-<view class="topbar" style="margin-top:{{topBarMarginTop}}px">
-  <view class="nav_title h_100">个人中心</view>
-</view>
-<view class="block" style="height:{{topBarMarginTop+72/750*windowWidth}}px;margin-bottom:52rpx"></view>
+<topbar mg-bottom="52" height="72" title="个人中心"></topbar>
 <view class="container">
   <view class="user_info flex flex_between">
     <view class="avatar">

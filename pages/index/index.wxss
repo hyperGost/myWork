@@ -1,4 +1,22 @@
 
+.topbar{
+  width: 100%;
+  height: 72rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  text-align: center;
+  background: #fff;
+}
+.topbar .nav_title{
+  line-height: 72rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #17233D;
+}
+
+
 .container{
   padding: 0 32rpx;
 }
@@ -62,11 +80,17 @@ button{
   justify-content: space-between;
   align-items: center;
 }
-.container .main_content .title text{
-font-size: 36rpx;
-font-weight: bold;
-color: #17233D;
+
+.container .main_content .title text.icon-next{
+  font-weight: 500;
+  color:  #C3CBD6;
+  font-size:28rpx
 }
+.container .main_content .title text{
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #17233D;
+  }
 .container .main_content .title image{
   width: 16rpx;
   height: 16rpx;
@@ -79,7 +103,7 @@ color: #17233D;
   width: 686rpx;
   height: 340rpx;
   padding: 79rpx 0;
-  border: #00AFDB 1px solid;
+  box-shadow: 0 0 30rpx -20rpx #00AFDB;
   box-sizing: border-box;
   margin: 0 auto;
   border-radius: 20rpx;
@@ -118,6 +142,7 @@ color: #00AFDB;
   overflow: hidden;
   border-radius: 20rpx;
   position: relative;
+  margin-left: 40rpx;
 }
 .container .main_content .funny_test .item .box_right image{
   width: 100%;
@@ -211,7 +236,7 @@ color: #00AFDB;
   margin-bottom: 26rpx;
 }
 .container .main_content .article .item .subtitle_box .subtitle{
-  margin-right: 100rpx;
+  margin-right: 64rpx;
 }
 .container .main_content .article .item .subtitle_box .time{
   display: flex;
@@ -231,7 +256,7 @@ color: #00AFDB;
   text-align: left;
   color: #657180;
   /* margin-right: 39rpx; */
-  padding-right: 39rpx;
+  padding-right: 29rpx;
 }
 .container .main_content .article .item .desc_box .box_left{
   display: flex;
@@ -249,10 +274,8 @@ color: #00AFDB;
   width: 100%;
   height: 100%;
 }
-.container .main_content .article .item .desc_box .box_left .info_box{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.container .main_content .article .item .desc_box .box_left .info_box .info_item{
+  margin-right: 16rpx;
 }
 .container .main_content .article .item .desc_box .box_left .info_box .is_top{
   width: 55rpx;
@@ -279,7 +302,6 @@ color: #00AFDB;
   font-weight: 500;
   color: #17233D;
   height: 32rpx;
-  line-height: 32rpx;
 }
 .container .main_content .article .item .desc_box .box_left .info_box .view_number_box text{
   font-size: 20rpx;

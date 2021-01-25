@@ -22,10 +22,6 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.topbar .iconfont.top_icon{
-  font-size: 40rpx;
-  font-weight: bold;
-}
 .container{
   padding: 0 32rpx;
 }

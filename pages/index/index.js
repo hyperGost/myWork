@@ -4,7 +4,27 @@ const app = getApp()
 
 Page({
   data: {
-    epub:[]
+    epub:[],
+    topBarMarginTop:app.globalData.topBarMarginTop,
+    windowWidth:app.globalData.windowWidth,
+    article:[
+      {
+        title:'让我们抓狂的罪魁祸首：情绪背后的秘密',
+        time:'2020/12/28',
+        desc:'人的任何一种情绪都是自然而然产生的结果就像一座山压在你上面我要吃饭',
+        isTop:true,
+        tag:'人际关系',
+        number:33
+      },
+      {
+        title:'心理学专家解释：为什么越是聪明的人头越少',
+        time:'2020/12/28',
+        desc:'这世界上只有三件事，自己的事，别人的事和老天的事。老天的件事哈',
+        isTop:true,
+        tag:'人际关系',
+        number:33
+      },
+    ]
   },
   bookDesc(e){
     // wx.request({

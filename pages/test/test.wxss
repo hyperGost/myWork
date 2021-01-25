@@ -20,8 +20,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  margin-left: 25rpx;
+  padding-left: 25rpx;
+  padding-bottom: 17rpx;
   z-index: 999;
+  background: #fff;
+  box-sizing: content-box;
 }
 .topbar .back_icon image{
   width: 20rpx;
@@ -40,15 +43,16 @@
   margin-right: 15rpx;
 }
 .container{
-  margin-top: 17rpx;
   width: 750rpx;
   padding-right: 32rpx;
+  margin-top: 17rpx;
+  margin-left: 198rpx;
 }
 .container .left_nav_box{
-  flex-shrink: 0;
+  position: fixed;
   width: 174rpx;
   background: #F2F4F5;
-  margin-right: 24rpx;
+  left: 0;
 }
 .container .left_nav_box .left_nav_item{
   position: relative;

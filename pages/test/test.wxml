@@ -1,5 +1,5 @@
-<view class="topbar flex flex_left" style="margin-top:{{topBarMarginTop}}px">
-  <navigator class="back_icon"><text class="iconfont icon-back" style="font-size:38rpx;font-weight:700"></text></navigator>
+<view class="topbar flex flex_left" style="padding-top:{{topBarMarginTop}}px">
+  <navigator class="back_icon"><text class="iconfont icon-back" style="font-size:38rpx;font-weight:bold"></text></navigator>
   <view class="serch_box flex">
     <image src="/images/serch.png" class="serch_img"></image>
     <input class="serch_input" placeholder="搜索" placeholder-style="font-size:36rpx;"/>
@@ -7,7 +7,7 @@
 </view>
 <view class="block" style="height:{{topBarMarginTop+72/750*windowWidth}}px"></view>
 <view class="container flex align_start">
-  <view class="left_nav_box">
+  <view class="left_nav_box" style="top:{{menuButtonHeight+menuButtonTop+17/750*windowWidth}}px">
     <view wx:for="{{testCategory}}" wx:key='index' data-index='{{index}}' bindtap="switchLeftNav" class="left_nav_item {{navActiveIndex===index ? 'nav_active' : ''}}">
       {{item}}
     </view>
@@ -30,7 +30,7 @@
         <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
         <text class="count">{{item.testNumber}}人</text>
       </view>
-      <view class="box_right flex flex_column flex_between align_start flex-1">
+      <view class="box_right flex flex_column flex_between align_start flex_1">
         <text class="title over_ellipsis_single">{{item.title}}</text>
         <text class="desc over_ellipsis_single">{{item.desc}}</text>
         <view class="box_bottom flex flex_between">

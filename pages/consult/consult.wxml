@@ -1,10 +1,8 @@
-<view class="topbar" style="margin-top:{{topBarMarginTop}}px">
-  <navigator>
+<topbar mg-bottom="52" height="72" title="预约咨询">
+  <navigator url='' slot='icon' class="aa">
     <text class="iconfont icon-back top_icon"></text>
   </navigator>
-  <view class="nav_title">预约咨询</view>
-</view>
-<view class="block" style="height:{{topBarMarginTop+72/750*windowWidth}}px;margin-bottom:52rpx"></view>
+</topbar>
 <view class="container">
   <view wx:for="{{doctor}}" class="doctor_box flex flex_between">
     <view class="box_left">

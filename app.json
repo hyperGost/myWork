@@ -1,9 +1,9 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/me/me",
     "pages/consult/consult",
-    "pages/test/test",
-    "pages/index/index"
+    "pages/test/test"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,0 +1,8 @@
+<view class="wx-topbar-container" style="height:{{topBarPaddingTop+height/750*windowWidth}}px;margin-bottom:{{mgBottom}}rpx">
+  <view class="wx-topbar" style="padding-top:{{topBarPaddingTop}}px;padding-bottom:{{mgBottom}}rpx;height:{{height}}rpx">
+    <view class="wx-topbar-title">{{title}}</view>
+    <view class="icon">
+      <slot name='icon'></slot>
+    </view>
+  </view>
+</view>
