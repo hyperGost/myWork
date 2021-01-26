@@ -8,6 +8,14 @@ Page({
   data: {
     topBarMarginTop:app.globalData.topBarMarginTop,
     windowWidth:app.globalData.windowWidth,
+    userInfo:{
+      avatar:'',
+      name:'王晓',
+      tel:18011112348
+    }
+  },
+  imageLoad(e){
+    console.log('图片加载')
   },
 
   /**

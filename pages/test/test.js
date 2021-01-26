@@ -1,7 +1,8 @@
 // pages/test/test.js
 const app=getApp();
 Page({
-
+ //右边盒子topmargin 32rpx + 70rpx
+ //17rpx + 32rpx +
   /**
    * 页面的初始数据
    */
@@ -17,12 +18,14 @@ Page({
     testCategory:['全部测试','个性人格','婚姻情感','睡眠质量','质量水平','量表测试'],
     navActiveIndex:0,
     testOrderIndex:0,
+    testRecord:0,
     testItem:[
       {
         title:'抑郁测试（专业版)',
         desc:'测测你的抑郁有多深',
         testNumber:9689,
         price:9.9,
+        discount:29.9
       },
       {
         title:'焦虑类型鉴别我要吃饭吃好吃的烤面筋',
@@ -37,8 +40,8 @@ Page({
         price:9.9,
       },
       {
-        title:'孤独水平感测试',
-        desc:'测一测你当前的孤独状况我要吃饭我要吃饭吃好吃的烤面筋',
+        title:'孤独水平感测试（专业版）',
+        desc:'童年受过的伤害，改变了你对',
         testNumber:'186.7万',
         price:9.9,
       },
@@ -75,6 +78,9 @@ Page({
   orderBy(e){
     let index=e.target.dataset.index;
     if(index) this.setData({testOrderIndex:index})
+  },
+  imageLoad(e){
+    console.log('图片加载')
   },
   /**
    * 生命周期函数--监听页面加载

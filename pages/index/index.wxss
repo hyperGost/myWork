@@ -52,16 +52,19 @@ button{
   margin: 0 auto;
   border-radius: 3%;
 }
+
+.container .nav .nav_lists{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60rpx 16rpx 0 16rpx;
+}
+
 .container .nav .nav_lists image{
   width: 98rpx;
   height: 98rpx;
 }
-.container .nav .nav_lists{
-  margin-top: 60rpx;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 .container .nav .nav_lists text{
   margin-top: 15rpx;
   font-size: 23rpx;
@@ -75,12 +78,19 @@ button{
 }
 .container .main_content .title{
   margin-top: 79rpx;
-  margin-bottom: 24rpx;
+  margin-bottom: 20rpx;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
+.container .main_content .nav_image{
+  margin-top: 94rpx;
+  margin-bottom: 92rpx;
+  width: 678rpx;
+  height: 150rpx;
+  border-radius: 75px;
+  overflow: hidden;
+}
 .container .main_content .title text.icon-next{
   font-weight: 500;
   color:  #C3CBD6;
@@ -108,10 +118,49 @@ button{
   margin: 0 auto;
   border-radius: 20rpx;
 }
+.container .main_content .my_test .record_box .record_item{
+  padding: 0 20rpx;
+  border-radius: 10rpx;
+  background: #EAF5F5;
+  margin-bottom: 16rpx;
+  height: 116rpx;
+}
+.container .main_content .my_test .record_box .record_item:last-child{
+  margin-bottom: 0;
+}
+.container .main_content .my_test .record_box .record_item .box_left .department{
+  font-size: 24rpx;
+  color: #657180;
+}
+.container .main_content .my_test .record_box .record_item .box_right .time{
+  font-size: 20rpx;
+  color: #9EA7B4;
+}
+.container .main_content .my_test .record_box .record_item .box_right .operation text{
+  vertical-align: middle;
+  font-size: 20rpx;
+  color: #657180;
+}
+.container .main_content .my_test .record_box .record_item .box_right .operation .text{
+  padding-right: 10rpx;
+}
+.container .main_content .my_test .record_box .record_item .box_left .test{
+  font-size: 32rpx;
+  color: #464C5B;
+}
+.container .main_content .my_test .record_box .record_item:nth-child(1){
+  height: 88rpx;
+  font-size: 32rpx;
+  color: #FFFFFF;
+  background: #00AFDB;
+}
+.container .main_content .my_test .record_box .record_item:nth-child(1) .box_right text{
+  color: #CCFFFE;
+}
 .container .main_content .my_test .not_logined text:nth-child(1){
-font-size: 32rpx;
-font-weight: 500;
-color: #00AFDB;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #00AFDB;
 }
 
 .container .main_content .my_test .not_logined text:nth-child(2){
@@ -307,6 +356,12 @@ color: #00AFDB;
   font-size: 20rpx;
   vertical-align: middle;
   color: #9ea7b4;
+}
+.container .main_content .article .item .desc_box .box_left .info_box .view_number_box .iconfont{
+  font-size: 26rpx;
+  padding-right: 4rpx;
+  height: 28rpx;
+  line-height: 30rpx;
 }
 .container .main_content .article .item .desc_box .box_left .info_box .view_number_box .view_number{
   color: #17233D;

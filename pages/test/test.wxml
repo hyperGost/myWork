@@ -5,7 +5,7 @@
     <input class="serch_input" placeholder="搜索" placeholder-style="font-size:36rpx;"/>
   </view>
 </view>
-<view class="block" style="height:{{topBarMarginTop+72/750*windowWidth}}px"></view>
+<view class="block" style="height:{{topBarMarginTop+89/750*windowWidth}}px;"></view>
 <view class="container flex align_start">
   <view class="left_nav_box" style="top:{{menuButtonHeight+menuButtonTop+17/750*windowWidth}}px">
     <view wx:for="{{testCategory}}" wx:key='index' data-index='{{index}}' bindtap="switchLeftNav" class="left_nav_item {{navActiveIndex===index ? 'nav_active' : ''}}">
@@ -13,7 +13,7 @@
     </view>
   </view>
   <view class="right_content_box">
-    <view class="top_bar_box flex flex_between">
+    <view style="top:{{menuButtonHeight+menuButtonTop+49/750*windowWidth}}px" class="top_bar_box flex flex_between">
       <view class="order-by flex" bindtap="orderBy">
         <view style="color:{{testOrderIndex==1 ? 'black' : '#9EA7B4'}}" data-index='1' class="top_bar_item">最新</view>
         <view style="color:{{testOrderIndex==2 ? 'black' : '#9EA7B4'}}" class="top_bar_item" data-index='2'>最热</view>
@@ -27,7 +27,7 @@
     </view>
     <view class="test_item_box flex flex_start" wx:for="{{testItem}}" wx:key='key'>
       <view class="box_left">
-        <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
+        <image bindload="imageLoad" lazy-load="true" src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
         <text class="count">{{item.testNumber}}人</text>
       </view>
       <view class="box_right flex flex_column flex_between align_start flex_1">
@@ -35,8 +35,9 @@
         <text class="desc over_ellipsis_single">{{item.desc}}</text>
         <view class="box_bottom flex flex_between">
           <view>
-            <text wx:if="{{item.price!=0}}" style="font-size:16rpx" class="price">￥</text>
+            <text wx:if="{{item.price!=0}}" class="units">￥</text>
             <text class="price">{{item.price==0 ? '免费' : item.price}}</text>
+            <text wx:if="{{item.discount}}" class="before_discount">¥{{item.discount}}</text>
           </view>
           <button class="flex">马上测试</button>
         </view>

@@ -37,12 +37,58 @@
         <text>我的测评</text>
         <text class="iconfont icon-next"></text>
       </navigator>
-      <view class="not_logined">
+      <view wx:if="{{testRecord}}" class="not_logined">
         <text>您还没有登录？</text>
         <text>测一测，早知道，压力、抑郁早治疗。</text>
         <button>去登录</button>
       </view>
+      <view wx:else class="record_box">
+        <view class="record_item flex flex_between">
+          <view class="box_left">
+            <text class="box_left">填写【汉密顿抑郁量表】</text>
+          </view>
+          <view class="box_right">
+            <view class="operation">
+              <text class="text">去填写</text>
+              <text class="iconfont icon-next"></text>
+            </view>
+          </view>
+        </view>
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+        <view class="record_item flex flex_between">
+          <view class="box_left flex flex_column align_start">
+            <text class="department">重庆西南医院心理科室</text>
+            <text class="test">汉密顿焦虑量表</text>
+          </view>
+          <view class="box_right flex flex_column align_end">
+            <text class="time">2020/04/07</text>
+            <view class="operation">
+              <text class="text">看结果</text>
+              <text class="iconfont icon-next"></text>
+            </view>
+          </view>
+        </view>
+        <!-- /////////////////////////////////////////// -->
+        <view class="record_item flex flex_between">
+          <view class="box_left flex flex_column align_start">
+            <text class="department">重庆西南医院心理科室</text>
+            <text class="test">汉密顿焦虑量表</text>
+          </view>
+          <view class="box_right flex flex_column align_end">
+            <text class="time">2020/04/07</text>
+            <view class="operation">
+              <text class="text">看结果</text>
+              <text class="iconfont icon-next"></text>
+            </view>
+          </view>
+        </view>
+      </view>
     </view>
+
+    <view class="nav_image">
+      <image class="w_100 h_100" src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
+    </view>
+
     <view class="main_content_item funny_test">
       <navigator url="" class="title">
         <text>趣味测评</text>
@@ -52,7 +98,7 @@
         <view class="box_left">
           <view class="subtitle">测一测你与哪类人的有有有有有有有湖广会馆哈哈哈哈</view>
           <text class="desc">想知道朋友中谁与你的性格</text>
-          <button>马上测评</button>
+          <button>去测评</button>
         </view>
         <view class="box_right">
           <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
@@ -63,7 +109,7 @@
         <view class="box_left">
           <text class="subtitle">爱情态度测试</text>
           <text class="desc">对待爱情，你的态度是哪种？</text>
-          <button>马上测评</button>
+          <button>去测评</button>
         </view>
         <view class="box_right">
           <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
@@ -116,7 +162,7 @@
             <view class="info_box flex flex_start">
               <text wx:if="{{item.isTop}}" class="is_top info_item">置顶</text>
               <text class="label info_item">{{item.tag}}</text>
-              <view class="view_number_box info_item flex">
+              <view class="view_number_box info_item flex align_end">
                 <text class="iconfont icon-view"></text>
                 <text class="view_number">{{item.number}}</text>
                 <text>人</text>

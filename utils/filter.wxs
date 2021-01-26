@@ -1,0 +1,7 @@
+var formatTel =function(n){
+  n = n.toString();
+  return n.slice(0,3) + '...' + n.slice(7,11);
+}
+module.exports={
+  formatTel:formatTel
+}

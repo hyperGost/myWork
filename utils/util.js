@@ -9,11 +9,11 @@ const formatTime = date => {
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
 
-const formatNumber = n => {
+const formatTel = n => {
   n = n.toString()
-  return n[1] ? n : '0' + n
+  return n.substr(0,3) + '...' + n.substr(-4,4)
 }
-
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  formatTel:formatTel
 }
