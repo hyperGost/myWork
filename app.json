@@ -42,6 +42,11 @@
       }
   ]
   },
+  "usingComponents": {
+    "topbar":"/component/Topbar/Topbar",
+    "count":"/component/count/count",
+    "mini-button":"/component/miniButton/miniButton"
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

@@ -1,3 +1,4 @@
+<wxs src='../../utils/filter.wxs' module="filter"></wxs>
 <topbar mg-bottom="44" height="72" title="愉悦心理"></topbar>
 <view class="container">
   <view class="nav">
@@ -98,22 +99,22 @@
         <view class="box_left">
           <view class="subtitle">测一测你与哪类人的有有有有有有有湖广会馆哈哈哈哈</view>
           <text class="desc">想知道朋友中谁与你的性格</text>
-          <button>去测评</button>
+          <mini-button text='去测评'></mini-button>
         </view>
         <view class="box_right">
           <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
-          <text class="count">1人测试</text>
+          <count text='{{filter.formatCount(125799)}}'></count>
         </view>
       </navigator>
       <navigator class="item" url="">
         <view class="box_left">
           <text class="subtitle">爱情态度测试</text>
           <text class="desc">对待爱情，你的态度是哪种？</text>
-          <button>去测评</button>
+          <mini-button text='去测评'></mini-button>
         </view>
         <view class="box_right">
           <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
-          <text class="count">4人测试</text>
+          <count text='9.89万人测过'></count>
         </view>
       </navigator>
     </view>
@@ -126,21 +127,27 @@
         <navigator class="item" url="">
           <view class="image_box">
             <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
-            <text class="count">2.23人</text>
+            <count text='233人'>
+              <text class="iconfont icon-stop count_icon" slot="icon"></text>
+            </count>
           </view>
           <text class="subtitle">纾解紧张焦虑</text>
         </navigator>
         <navigator class="item" url="">
           <view class="image_box">
             <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
-            <text class="count">2.23人</text>
+           <count text='500人'>
+             <text class="iconfont icon-music count_icon" slot='icon'></text>
+           </count>
           </view>
           <text class="subtitle">去感受自然的美的好得和恢复稳定稳定</text>
         </navigator>
         <navigator class="item" url="">
           <view class="image_box">
             <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
-            <text class="count">2.23人</text>
+            <count text='388人'>
+              <text class="iconfont icon-music count_icon" slot='icon'></text>
+            </count>
           </view>
           <text class="subtitle">教你卸下自的没哈哈哈哈哈哈哈哈哈哈哈</text>
         </navigator>

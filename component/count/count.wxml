@@ -1,0 +1,4 @@
+<view class="count_box" style="height:{{height}}rpx">
+  <slot name="icon"></slot>
+  <text class="count">{{text}}</text>
+</view>

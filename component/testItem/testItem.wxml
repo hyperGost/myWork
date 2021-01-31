@@ -1,0 +1,18 @@
+    <view class="test_item_box flex flex_start">
+      <view class="box_left">
+        <image class="lazy-{{index}} image" bindload="imageLoad" src="{{show ? src : '/images/index_banner.jpg'}}"></image>
+        <count text="{{count}}人"></count>
+      </view>
+      <view class="box_right flex flex_column flex_between align_start flex_1">
+        <text class="title over_ellipsis_single">{{title}}</text>
+        <text class="desc over_ellipsis_single">{{desc}}</text>
+        <view class="box_bottom flex flex_between">
+          <view>
+            <text wx:if="{{price!=0}}" class="units">￥</text>
+            <text class="price">{{price==0 ? '免费' : price}}</text>
+            <text wx:if="{{discount}}" class="before_discount">¥{{discount}}</text>
+          </view>
+          <mini-button text='去测评'></mini-button>
+        </view>
+      </view>
+    </view>

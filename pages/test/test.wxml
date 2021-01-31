@@ -1,3 +1,4 @@
+<wxs src='../../utils/filter.wxs' module="filter"></wxs>
 <view class="topbar flex flex_left" style="padding-top:{{topBarMarginTop}}px">
   <navigator class="back_icon"><text class="iconfont icon-back" style="font-size:38rpx;font-weight:bold"></text></navigator>
   <view class="serch_box flex">
@@ -25,10 +26,10 @@
         <text>个测评</text>
       </view>
     </view>
-    <view class="test_item_box flex flex_start" wx:for="{{testItem}}" wx:key='key'>
+    <!-- <view class="test_item_box flex flex_start" wx:for="{{testItem}}" wx:key='index'>
       <view class="box_left">
-        <image bindload="imageLoad" lazy-load="true" src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg"></image>
-        <text class="count">{{item.testNumber}}人</text>
+        <image class="lazy-{{index}}" bindload="imageLoad" src="{{item.show ? item.src : '/images/index_banner.jpg'}}"></image>
+        <count text='{{item.testNumber}}人'></count>
       </view>
       <view class="box_right flex flex_column flex_between align_start flex_1">
         <text class="title over_ellipsis_single">{{item.title}}</text>
@@ -39,9 +40,10 @@
             <text class="price">{{item.price==0 ? '免费' : item.price}}</text>
             <text wx:if="{{item.discount}}" class="before_discount">¥{{item.discount}}</text>
           </view>
-          <button class="flex">马上测试</button>
+          <mini-button text='去测评'></mini-button>
         </view>
       </view>
-    </view>
+    </view> -->
+    <test-item title="吃饭" desc="哈哈"></test-item>
   </view>
 </view>

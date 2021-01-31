@@ -7,6 +7,28 @@
     font-family: PingFang SC;
     font-weight: 500;
   }
+  .count_box{
+    background: #000;
+    opacity: 0.8;
+    position: absolute;
+    height: 30rpx;
+    border-radius: 0 16rpx;
+    font-weight: 500;
+    left: 0;
+    bottom: 0;
+    color: white;
+    font-size: 20rpx;
+    text-align: center;
+    padding: 0 8rpx;
+  }
+  .count_box text{
+    font-size: 20rpx;
+    color: #fff;
+    line-height: 32rpx;
+  }
+  .count_box .iconfont{
+    padding-right: 8rpx;
+  }
   .top_icon{
     font-size: 40rpx;
     font-weight: bold;

@@ -19,57 +19,8 @@ Page({
     navActiveIndex:0,
     testOrderIndex:0,
     testRecord:0,
-    testItem:[
-      {
-        title:'抑郁测试（专业版)',
-        desc:'测测你的抑郁有多深',
-        testNumber:9689,
-        price:9.9,
-        discount:29.9
-      },
-      {
-        title:'焦虑类型鉴别我要吃饭吃好吃的烤面筋',
-        desc:'祝你缓解焦虑的治愈测评!',
-        testNumber:'188.6万',
-        price:0,
-      },
-      {
-        title:'FPA性格色彩测试',
-        desc:'红蓝黄绿，你是那种？',
-        testNumber:'188.6万',
-        price:9.9,
-      },
-      {
-        title:'孤独水平感测试（专业版）',
-        desc:'童年受过的伤害，改变了你对',
-        testNumber:'186.7万',
-        price:9.9,
-      },
-      {
-        title:'孤独水平感测试',
-        desc:'测一测你当前的孤独状况我要吃饭我要吃饭吃好吃的烤面筋',
-        testNumber:'186.7万',
-        price:9.9,
-      },
-      {
-        title:'孤独水平感测试',
-        desc:'测一测你当前的孤独状况我要吃饭我要吃饭吃好吃的烤面筋',
-        testNumber:'186.7万',
-        price:9.9,
-      },
-      {
-        title:'孤独水平感测试',
-        desc:'测一测你当前的孤独状况我要吃饭我要吃饭吃好吃的烤面筋',
-        testNumber:'186.7万',
-        price:9.9,
-      },
-      {
-        title:'孤独水平感测试',
-        desc:'测一测你当前的孤独状况我要吃饭我要吃饭吃好吃的烤面筋',
-        testNumber:'186.7万',
-        price:9.9,
-      }
-    ]
+    testItem:[],
+    pageNum:1
   },
   switchLeftNav(e){
     let navActiveIndex=e.currentTarget.dataset.index;
@@ -80,16 +31,55 @@ Page({
     if(index) this.setData({testOrderIndex:index})
   },
   imageLoad(e){
-    console.log('图片加载')
+    // console.log('图片加载')
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('顶部距离'+this.data.topBarMarginTop)
-    // let _data=this.data;
-    // _data.topBarPaddingTop=(_data.menuButtonHeight/2+_data.menuButtonTop)-72/750*_data.windowWidth/2;
-    // this.setData({topBarPaddingTop:_data.topBarPaddingTop})
+    //定义过滤函数
+    this.formatCount=function(str){
+      str=str.toString();
+      if(str.length>=5){
+        str=(Math.floor(parseInt(str)/100)/100).toString()+'万';
+      }
+      console.log('格式化')
+      return str;
+    }
+    let testItem=this.data.testItem;
+    for(let i=0;i<=9;i++){
+      testItem.push({
+        title:'孤独感水平测试（专业版）',
+        desc:'测测你的抑郁有多深我要吃饭',
+        testNumber:968998,
+        price:9.9,
+        discount:29.9,
+        src:'https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg',
+        show:false
+      });
+      //格式化人数
+      testItem[i].testNumber=this.formatCount(testItem[i].testNumber)
+    }
+   this.setData({testItem})
+    //异步启动图片监听
+    setTimeout(()=>{
+      for(let i in testItem){
+        let obj=wx.createIntersectionObserver();
+        obj.relativeToViewport({bottom:0}).observe('.lazy-'+i,(res)=>{
+        console.log('启动监听')
+        if(testItem[i].show){
+          //如果这个图片已经被加载 则取消这个图片的监听
+          obj.disconnect()
+        }
+        else{//图片进入显示区域就加载
+            if(res.intersectionRatio>0){
+              testItem[i].show=true;
+              this.setData({testItem})
+            }
+          }
+        })
+      }
+    },0)
   },
 
   /**
@@ -131,8 +121,72 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    // console.log('上拉刷新');
+    wx.showLoading({
+      title: '加载中',
+    });
+    let testItem=this.data.testItem,
+    startIndex=testItem.length;
+    //添加数据
+    for(let i=0;i<=9;i++){
+      testItem.push({
+        title:'抑郁测试（专业版)',
+        desc:'测测你的抑郁有多深',
+        testNumber:165473,
+        price:9.9,
+        discount:29.9,
+        src:'https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1267931373,3662510004&fm=26&gp=0.jpg',
+        show:false
+      })
+      testItem[startIndex+i].testNumber=this.formatCount(testItem[startIndex+i].testNumber)
+    }
+    this.setData({testItem});
+    //数据添加完毕
+    setTimeout(()=>{
+      for(let i=startIndex;i<testItem.length;i++){
+        let obj=wx.createIntersectionObserver();
+        obj.relativeToViewport({bottom:0}).observe('.lazy-'+i,(res)=>{
+        console.log('启动监听')
+        if(testItem[i].show){
+          //如果这个图片已经被加载 则取消这个图片的监听
+          obj.disconnect()
+        }
+        else{//图片进入显示区域就加载
+            if(res.intersectionRatio>0){
+              console.log('加载出图片了')
+              testItem[i].show=true;
+              this.setData({testItem})
+            }
+          }
+        })
+      }
+    },0)
 
+
+    wx.hideLoading();
+    // this.setData({pageNum:this.data.pageNum+1});
+    // wx.request({
+    //   url: 'url',
+    //   data:{
+    //     pageNum:this.data.pageNum,
+    //     pageSize:10
+    //   },
+    //   method:'GET',
+    //   header:{
+    //     'content-type':'application/text'
+    //   },
+    //   success:(res)=>{
+
+    //   }
+    // })
+    // console.log(this.data.pageNum);
+    // setTimeout(()=>{
+    //   wx.hideLoading()
+    // },1000)
   },
+  // onPageScroll(e){
+  //   console.log(e.scrollTop)
+  // },
 
   /**
    * 用户点击右上角分享

@@ -2,6 +2,15 @@ var formatTel =function(n){
   n = n.toString();
   return n.slice(0,3) + '...' + n.slice(7,11);
 }
+var formatCount =function(str){
+  str=str.toString();
+  if(str.length>=5){
+    str=(Math.floor(parseInt(str)/100)/100).toString()+'万';
+  }
+  console.log('运行wx脚本')
+  return str;
+}
 module.exports={
-  formatTel:formatTel
+  formatTel:formatTel,
+  formatCount:formatCount
 }
